@@ -1,0 +1,13 @@
+ARM_ Environment Variables:
+For these type of environment variables, declaration is not required, directly we can set up using ARM_ and use it. 
+a) For storage account use, ARM_ACCESS_KEY only to set as environment variable:
+#export ARM_ACCESS_KEY="give value here" and use it without any declaration in the tf files.
+b) We can also set the SP details as Environment variables but prefix with ARM_ like below:
+export ARM_CLIENT_ID="8fe9d840-f7e5-45f3-ba69-5dbafd3d2c21"
+export ARM_CLIENT_SECRET="i_LJbPLeeI_sbXvE7~b2f_rkrCg0Cj29_Z"
+export ARM_SUBSCRIPTION_ID="7a0892bc-8344-4892-a03c-06e61fa9b61f"
+export ARM_TENANT_ID="423be9f6-a52d-4533-8f86-ad54aa3406ff"
+provider "azurerm" {
+  version         = "=2.5.0"
+  features {}
+}
